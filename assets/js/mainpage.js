@@ -11,7 +11,6 @@ async function getCharApi(char_url){
     const data = await res.json()
     renderCharList(data.data.results) 
 }
-
 // Rendering the characters list in the homepage
 function renderCharList(data){
     const charListUl = document.getElementById('charListUl')
@@ -54,7 +53,7 @@ searchbar.onkeyup = function(event){
         while (ul.hasChildNodes()){
             ul.firstChild.remove()
         }
-        var api_url = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${userData}&ts=1&apikey=26cd8e7d36c0122137914a00f6b87862&hash=f7fb73edbdb6b9355a7c4c7a6a7d68b9`
+        var api_url = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${userData}&ts=1&apikey=6d47a63ab8ed920ce1fcc082d0ac903f&hash=e02da18fd84011b0c9b6ff78ade4ec2f`
         getApi(api_url)
     }
     if(userData.length==0){
@@ -81,7 +80,7 @@ function searchListFunc(data){
             li.className = 'flex j-sb a-c'
             li.innerHTML = 
                             `
-                                <a href=${"/Superhero-Hunter-App-Coding-Ninjas/character.html?character=" + data[i].id}git class="flex j-sb a-c" style="text-decoration:none;color:black;">
+                                <a href=${"/marvel.github.io/character.html?character=" + data[i].id}git class="flex j-sb a-c" style="text-decoration:none;color:black;">
                                     <div class="left flex a-c">
                                         <img src="${data[i].thumbnail.path}.jpg" alt="" id="img1">
                                         <p class="charName" id="charName1">
