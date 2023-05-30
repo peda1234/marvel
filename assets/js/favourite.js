@@ -10,7 +10,7 @@ if(localStorage.length != 0){
         // use key name to retrieve the corresponding value
         var value = localStorage.getItem(key);
         
-        const charById = `http://gateway.marvel.com/v1/public/characters/${value}?&ts=1&apikey=26cd8e7d36c0122137914a00f6b87862&hash=f7fb73edbdb6b9355a7c4c7a6a7d68b9`
+        const charById = `http://gateway.marvel.com/v1/public/characters/${value}?&ts=1&apikey=6d47a63ab8ed920ce1fcc082d0ac903f&hash=e02da18fd84011b0c9b6ff78ade4ec2f`
         favChar(charById)
     }
 }else{
